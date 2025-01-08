@@ -1,0 +1,680 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container for center alignment */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/*   hover */
+
+/* Smooth transition for the background color */
+#skills.visible {
+    animation: fadeIn 1s ease-out;
+}
+
+#skills.section {
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background and shadow */
+    background: linear-gradient(45deg,  #6a1b9a, #ff6f61, #00bcd4); /* Initial gradient background */
+    padding: 30px; /* Add some padding around the section */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* Hover effect for the entire section */
+#skills.section:hover {
+    background: linear-gradient(135deg, #6a1b9a, #ff6f61, #00bcd4); /* New gradient on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds a soft shadow around the section */
+}
+
+/* Style for the skills list */
+.skills-list li {
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for color, transform, and shadow */
+}
+
+/* Hover effect for list items */
+.skills-list li:hover {
+    color: #007bff; /* Change text color on hover */
+    transform: translateX(10px); /* Slight movement on hover */
+    cursor: pointer; /* Make it clear it's interactive */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Shadow effect for individual list items */
+}
+
+@media (max-width: 768px) {
+    #skills.section {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .skills-list li {
+        font-size: 16px; /* Adjust font size */
+    }
+}
+
+  /* General Styling for the navigation container */
+nav {
+    background-color: #333; /* Dark background for the navbar */
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Style for the list items */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between navbar items */
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effects for navbar links */
+nav ul li a:hover {
+    color: #ff5722;
+    transform: scale(1.1);
+}
+
+/* Underline effect on hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff5722;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Adding hover effect for the whole navbar */
+nav:hover {
+    background-color: #444; /* Darker background when hovering over the entire nav */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow around the navbar */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the background color and shadow */
+}
+
+/* Making sure the list items are centered */
+nav ul li {
+    display: inline-block;
+}
+
+/* Optional: Making the entire nav responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack the items vertically on smaller screens */
+    }
+}
+
+/* Aboout*/
+
+/* General section styles */
+#about {
+    padding: 50px 20px;
+    background-color: linear-gradient(45deg,  #6a1b9a, #ff6f61, #00bcd4);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px); /* Start off-screen */
+}
+
+/* Add animation on page load for fade-in and slide-up */
+#about.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Smooth animation for h2 */
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-30px); /* Start from the left */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Add animation when the section becomes visible */
+#about.visible h2 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Smooth animation for paragraphs */
+#about p {
+    font-size: 1.1rem;
+    color: #f3eded;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateX(30px); /* Start from the right */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-bottom: 20px;
+}
+
+/* Add animation when the section becomes visible */
+#about.visible p {
+    opacity: 1;
+    transform: translateX(0);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Hover effects for the paragraph (Optional) */
+#about p:hover {
+    color: #007bff;
+    transform: translateX(10px); /* Slight move on hover */
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+}
+
+
+/*CERTIFIVATE*/
+/* General Section Style */
+#certifications {
+    padding: 50px 20px;
+    background-color:linear-gradient(45deg,  #6a1b9a, #ff6f61, #00bcd4);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px); /* Start off-screen */
+}
+
+/* When section becomes visible */
+#certifications.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    animation: fadeIn 1s ease-out;
+}
+#experience.visible {
+    animation: fadeIn 1s ease-out;
+}
+#projects.visible {
+    animation: fadeIn 1s ease-out;
+}
+
+#contact.visible {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Header Style */
+#certifications h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-30px); /* Start from left */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* When the section is visible, animate the header */
+#certifications.visible h2 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Certifications List Style */
+.certifications-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(30px); /* Start from below */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* When the section becomes visible */
+#certifications.visible .certifications-list {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effect for List Items */
+.certifications-list li {
+    font-size: 1.2rem;
+    color: white;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Animation */
+.certifications-list li:hover {
+    transform: translateX(10px); /* Slight horizontal shift */
+    color: #007bff; /* Change text color */
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); /* Shadow effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #certifications h2 {
+        font-size: 2rem;
+    }
+
+    .certifications-list {
+        grid-template-columns: 1fr; /* One column layout on smaller screens */
+    }
+
+    .certifications-list li {
+        font-size: 1rem;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+/* Name H1*/
+/* Style for the <h1> */
+/* Body and HTML Setup */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background: linear-gradient(45deg, #6a1b9a, #ff6f61, #00bcd4);  /* Gradient background */
+    color: #fff; /* Default text color */
+}
+
+/* Header Section */
+header {
+    position: relative;
+    height: 120vh; /* Full height of the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Container inside the header */
+header div {
+    max-width: 1200px; /* Max width to keep things aligned */
+    width: 100%;
+}
+
+/* Default profile image style */
+.profile-image {
+    width: 350px;  /* Set width of the image */
+    height: 350px; /* Set height of the image */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    opacity: 0;
+    transform: scale(0.9);
+    transition: transform 0.3s ease, opacity 0.5s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Fade-in effect when the page loads */
+.profile-image.loaded {
+    opacity: 1; /* Fade in the image */
+    transform: scale(1); /* Restore original size */
+}
+
+/* Hover effect for scaling and shadow */
+.profile-image:hover {
+    transform: scale(1.1); /* Enlarge the image */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a soft shadow on hover */
+}
+
+/* Optional: Applying some animation when the page loads */
+@keyframes fadeInEffect {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Heading <h1> styling */
+h1 {
+    font-size: 4rem; /* Large size */
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff6f61, #ff5722, #f44336); /* Colorful gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 10px 30px;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+/* Hover effect for <h1> */
+h1:hover {
+    transform: scale(1.1); /* Slight scale on hover */
+    color: #ff5722; /* Change color */
+}
+
+/* Navbar Styling */
+nav {
+    margin-top: 40px;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Larger space between items */
+    flex-wrap: wrap; /* To ensure the navbar is responsive */
+}
+
+/* Styling for each navbar link */
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effects for the navbar links */
+nav ul li a:hover {
+    color: #ff5722;
+    transform: scale(1.1); /* Slight scaling effect */
+}
+
+/* Underline animation on hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff5722;
+    transition: width 0.3s ease;
+}
+
+/* Expanding underline effect on hover */
+nav ul li a:hover::after {
+    width: 100%; /* Underline expands */
+}
+
+/* Adding a glowing effect around the header */
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    filter: blur(15px);
+    z-index: -1; /* Behind the text */
+    animation: glow 2s ease-out infinite; /* Animated glowing effect */
+}
+
+/* Keyframes for the glowing background */
+@keyframes glow {
+    0% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem; /* Smaller font size on mobile */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navbar links vertically */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Adjust link font size */
+    }
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Section styling */
+.section {
+    padding: 60px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+.skills-list, .certifications-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-list li, .certifications-list li {
+    background-color: #0c0c0c;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Project Section */
+.project {
+    background-color: #0e0101;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Job Experience */
+.job {
+    background-color: #0a0101;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.job h3 {
+    font-size: 1.8rem;
+}
+
+.job ul {
+    margin-top: 10px;
+}
+
+.job li {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #111111;
+    padding: 40px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0f0f0f;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/*DOWNLOAD CV BUTTON*/
+.download-cv-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-cv-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
