@@ -320,14 +320,14 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   background: linear-gradient(45deg, #6a1b9a, #ff6f61, #00bcd4);  /* Gradient background */
+    background: linear-gradient(45deg, #6a1b9a, #ff6f61, #00bcd4); /* Gradient background */
     color: #fff; /* Default text color */
 }
 
 /* Header Section */
 header {
     position: relative;
-    height: 120vh; /* Full height of the screen */
+    height: 100vh; /* Full height of the screen */
     display: flex;
     flex-direction: column;
     justify-content: center;
