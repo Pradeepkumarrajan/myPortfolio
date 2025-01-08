@@ -23,10 +23,10 @@
             <li> <a href="#contact"> Contact</a></li>  
         </ul>  
         <ul class="contact-list">
-            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/yourusername" target="_blank" class="contact-link"><i class="fab fa-instagram"></i> PradeepKumar</a></li>
-            <li><strong>Twitter:</strong> <a href="https://twitter.com/yourusername" target="_blank" class="contact-link"><i class="fab fa-twitter"></i> @yourusername</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i> Pradeepkumar Rajan</a></li>
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/yourphonenumber" target="_blank" class="contact-link"><i class="fab fa-whatsapp"></i> +91 6379459968</a></li>
+            <li> <a href="https://www.instagram.com/chockii_boy" target="_blank" class="contact-link"><i class="fab fa-instagram"></i></a></li>
+            <li> <a href="https://twitter.com/pradeepkumarrajan98" target="_blank" class="contact-link"><i class="fab fa-twitter"></i></a></li>
+            <li> <a href="https://www.linkedin.com/in/pradeepkumar-rajan-3b6a79192?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i></a></li>
+            <li> <a href="https://wa.me/6379459968" target="_blank" class="contact-link"><i class="fab fa-whatsapp"></i></a></li>
         </ul>           
     </nav>
     <a href="PradeepkumarRajan_resume.pdf" class="download-cv-btn" download>Download CV</a>
@@ -170,10 +170,10 @@
             <button type="submit" class="submit-button">Send Message</button>
         </form><br>  
         <ul class="contact-list_1">
-            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/yourusername" target="_blank" class="contact-link"><i class="fab fa-instagram"></i> PradeepKumar</a></li>
-            <li><strong>Twitter:</strong> <a href="https://twitter.com/yourusername" target="_blank" class="contact-link"><i class="fab fa-twitter"></i> @yourusername</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i> Pradeepkumar Rajan</a></li>
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/yourphonenumber" target="_blank" class="contact-link"><i class="fab fa-whatsapp"></i> +91 6379459968</a></li>
+            <li> <a href="https://www.instagram.com/chockii_boy" target="_blank" class="contact-link"><i class="fab fa-instagram"></i></a></li>
+            <li> <a href="https://twitter.com/pradeepkumarrajan98" target="_blank" class="contact-link"><i class="fab fa-twitter"></i></a></li>
+            <li> <a href="https://www.linkedin.com/in/pradeepkumar-rajan-3b6a79192?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i>  </a></li>
+            <li> <a href="https://wa.me/6379459968" target="_blank" class="contact-link"><i class="fab fa-whatsapp"></i></a></li>
         </ul> 
     </div>
 </section>
@@ -241,25 +241,26 @@
 }
 
 .contact-list_1 li {
-    display: flex; /* Use flex on each list item to align text and icon horizontally */
-    align-items: center; /* Vertically align icon and text */
+    margin: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth animation on hover */
 }
 
 .contact-list_1 a {
+    display: inline-block;
     text-decoration: none;
-    color: #007bff; /* Blue color for links */
-    font-size: 1.1em; /* Font size for links */
-    margin-left: 5px; /* Space between icon and text */
+    color: #007bff; /* Default color for the icons */
+    font-size: 24px;  /* Icon size */
+    transition: transform 0.3s ease-in-out, color 0.3s ease; /* Animation for scale and color */
 }
 
 .contact-list_1 a:hover {
-    color: #ff5722; /* Hover effect for links */
+    color: #0056b3;  /* Change color when hovered */
+    transform: scale(1.2); /* Increase size of icon on hover */
 }
 
 /* Style for icons */
-.contact-list_1 i {
-    font-size: 1.5em; /* Larger icon size */
-    color: #333; /* Icon color */
+.contact-list_1 a i {
+    margin-right: 8px;  /* Space between icon and text */
 }
 /* Base styling for the text */
 .animated-title {
@@ -314,6 +315,84 @@
     }
     100% {
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+}
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h3.animated-title {
+        font-size: 20px;
+    }
+
+    ul.main-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul.main-nav li {
+        margin: 10px 0;
+    }
+
+    .contact-list {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .download-cv-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    h3.animated-title {
+        font-size: 18px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .download-cv-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .contact-list_1 {
+        padding-left: 0;
+    }
+
+    .contact-list_1 li {
+        margin: 15px 0;
+        font-size: 18px;
+        display: block; /* Stack items vertically */
+    }
+
+    .contact-list_1 a {
+        font-size: 16px;
+    }
+
+    .contact-list_1 i {
+        margin-right: 10px;
+    }
+}
+
+/* Responsiveness for Smaller Mobile Devices */
+@media screen and (max-width: 480px) {
+    .contact-list_1 li {
+        font-size: 16px;
+    }
+
+    .contact-list_1 a {
+        font-size: 14px;
     }
 }
 
