@@ -264,58 +264,79 @@
 }
 /* Base styling for the text */
 .animated-title {
-    font-family: 'Arial', sans-serif; 
-    font-size: 3em; 
-    text-align: center; 
-    color: #007bff; 
-    display: inline-block; 
-    animation: bounceIn 1s ease, colorChange 2s infinite, shadowEffect 3s infinite; 
-    font-weight: bold; 
+    display: inline-block;
+    font-size: 36px;
+    font-weight: bold;
+    overflow: hidden; /* Hide the content initially */
+    white-space: nowrap; /* Prevent wrapping */
+    letter-spacing: 2px; /* Adjust space between letters */
 }
 
-/* Bounce animation */
-@keyframes bounceIn {
-    0% {
-        transform: scale(0.5);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+/* Break each letter into a span and animate it */
+.animated-title span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Apply animation */
+    animation-iteration-count: infinite; /* Make the animation loop */
 }
 
-/* Color change animation */
-@keyframes colorChange {
+/* Keyframes for animation */
+@keyframes fadeIn {
     0% {
-        color: #007bff; /* Initial blue */
-    }
-    25% {
-        color: #ff5722; /* Orange */
-    }
-    50% {
-        color: #4caf50; /* Green */
-    }
-    75% {
-        color: #ffc107; /* Yellow */
+        opacity: 0;
+        transform: translateY(-20px); /* Move letters up initially */
     }
     100% {
-        color: #007bff; /* Back to blue */
+        opacity: 1;
+        transform: translateY(0); /* Reset position */
     }
 }
 
-/* Text shadow effect */
-@keyframes shadowEffect {
-    0% {
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    }
-    50% {
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.3);
-    }
-    100% {
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    }
+/* Apply delay to each letter */
+.animated-title span:nth-child(1) {
+    animation-delay: 0s;
+}
+.animated-title span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.animated-title span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.animated-title span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.animated-title span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.animated-title span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+.animated-title span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+.animated-title span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+.animated-title span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+.animated-title span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+.animated-title span:nth-child(11) {
+    animation-delay: 1s;
+}
+.animated-title span:nth-child(12) {
+    animation-delay: 1.1s;
+}
+.animated-title span:nth-child(13) {
+    animation-delay: 1.2s;
+}
+.animated-title span:nth-child(14) {
+    animation-delay: 1.3s;
+}
+.animated-title span:nth-child(15) {
+    animation-delay: 1.4s;
 }
 @media screen and (max-width: 768px) {
     h1 {
