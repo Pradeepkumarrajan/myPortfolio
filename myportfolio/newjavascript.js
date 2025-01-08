@@ -121,6 +121,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const profileImage = document.querySelector('.profile-image');
     profileImage.classList.add('loaded');
 });
+window.onload = function () {
+    var text = document.querySelector('.animated-title');
+    var content = text.innerHTML;
+    
+    // Wrap each letter in a span tag
+    text.innerHTML = content.split('').map(function(letter) {
+        return letter === ' ' ? '&nbsp;' : '<span>' + letter + '</span>';
+    }).join('');
+};
+
 
 document.querySelector('#contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
